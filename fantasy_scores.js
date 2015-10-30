@@ -34,7 +34,6 @@ function updateFantasyScores(){
   //find two team's stat tables
   var tables = document.querySelectorAll("#nbaGITeamStats")
   if (tables.length == 2){
-    console.log("found")
     //let's get a score of match
     var home = +document.getElementsByClassName("teamHome")[0].innerHTML
     var away = +document.getElementsByClassName("teamAway")[0].innerHTML
