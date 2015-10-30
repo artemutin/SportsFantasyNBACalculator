@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+
+  "name": "Sports Fantasy Calculator",
+  "description": "Это расширение добавляет в таблицу Box Score на сайте nba.com столбец с ФО для фэнтези турнира Sports.ru",
+  "version": "1.0",
+
+    "page_action": {
+  },
+  "permissions": [
+    "activeTab",
+    "http://www.nba.com/"    
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://www.nba.com/games/*"],
+      "js": ["fantasy_scores.js"]
+    }
+  ]
+}
