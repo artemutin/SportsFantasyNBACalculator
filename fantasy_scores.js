@@ -77,11 +77,8 @@ function updateFantasyScores(){
               FO += 1
             }
           }       
-          //two-pointers
+          //two-pointers + three-pointers. No need to use of separate 3-point column
           stat = splitCol(3, "-")
-          FO += (stat[0] - stat[1])
-          //three-pointers
-          stat = splitCol(4, "-")
           FO += (stat[0] - stat[1])
           //free-throws
           stat = splitCol(5, "-")
