@@ -40,11 +40,13 @@ function updateFantasyScores(){
     for (var i = 0; i < 2; ++i){
       //calculate win-loss modifier
       //first table for away, second for home team
-      var winLossMod
-      if (i == 0){
-        winLossMod = away > home ? 3 : -2
-      }else{
-        winLossMod = home > away ? 2 : -3
+      var winLossMod = 0
+      if (home != away){//handling tie as no mods applied
+        if (i == 0){
+            winLossMod = away > home ? 3 : -2
+          }else{
+            winLossMod = home > away ? 2 : -3
+          }
       }
       //get rows
       var table = tables.item(i) 
